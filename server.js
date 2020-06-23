@@ -16,16 +16,11 @@ app.use(express.static("public"));
 db.on("error", error => {
     console.log("Database Error:", error);
   });
-//===== Routes--> will need to move to routes folder ======
-app.get("/api/workouts", (req, res) => {
-
-})
+//===== Require routes here  ==============
 
 
 
-
-
-
+//========================================
 
 app.listen(3000, () => {
     console.log("App running on port 3000!");

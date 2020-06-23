@@ -30,5 +30,4 @@ workoutSchema.methods.workoutComplete = function() {
 }
 
 const Workout = mongoose.model("Workout", workoutSchema);
-
 module.exports = Workout;
