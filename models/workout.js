@@ -25,7 +25,9 @@ const workoutSchema = new Schema({
     }]
 })
 
-
+workoutSchema.methods.workoutComplete = function() {
+    //not sure yet what to do with this
+}
 
 const Workout = mongoose.model("Workout", workoutSchema);
 
