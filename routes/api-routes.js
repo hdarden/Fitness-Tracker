@@ -39,7 +39,7 @@ module.exports = function (app) {
       });
   });
 
-  //getWorkoutsInRange
+  //getWorkoutsInRange-- in range of what?? RM does not specify what range we are looking for
   app.get("/api/workouts/range", (req, res) => {
     const blankArr = []
     db.Workout.findOne(
