@@ -30,7 +30,7 @@ const workoutSchema = new Schema({
     }
 }
 )
-//calculating the duration without putting it 
+//calculating the duration without putting it Robo
 workoutSchema.virtual("totalDuration").get(function() {
     return this.exercises.reduce(function(total, current) {
         return total + current.duration;
