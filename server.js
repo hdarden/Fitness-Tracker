@@ -1,27 +1,22 @@
 const express = require("express");
-const mongojs = require("mongojs");
+const mongoose = require("mongoose");
 const logger = require("morgan");
 
-const databaseUrl = "workout";
-const collections = ["exercise"];
-const db = mongojs(databaseUrl, collections);
-
+const PORT = process.env.PORT || 3000;
 const app = express();
-//morgan comes before any app.use
+
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-db.on("error", error => {
-    console.log("Database Error:", error);
-  });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/dbExample", { useNewUrlParser: true });
+
 //===== Require routes here  ==============
-
-
-
+(require("./routes/api-routes"))
+(require("./routes/html-routes"))
 //========================================
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("App running on port 3000!");
-  });
+});
