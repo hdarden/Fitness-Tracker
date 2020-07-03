@@ -17,7 +17,7 @@ A consumer will reach their fitness goals quicker when they track their workout 
 
 ## Deployment
 
-[Fitness Tracker App](https://git.heroku.com/thawing-bayou-60295.git)
+[Deployed Fitness Tracker App](https://thawing-bayou-60295.herokuapp.com/)
 
 
 ## Screenshot
